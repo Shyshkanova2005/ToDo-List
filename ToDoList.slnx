@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="ToDoList.Api/ToDoList.Api.csproj" />
+  <Project Path="ToDoList.Application/ToDoList.Application.csproj" />
+  <Project Path="ToDoList.Domain/ToDoList.Domain.csproj" />
+  <Project Path="ToDoList.Infrastructure/ToDoList.Infrastructure.csproj" />
+  <Project Path="ToDoList.Tests/ToDoList.Tests.csproj" Id="6c568ee7-d326-4655-8c8c-a79862603c74" />
+</Solution>
