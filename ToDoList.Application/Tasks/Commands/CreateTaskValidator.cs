@@ -19,5 +19,21 @@ namespace ToDoList.Application.Tasks.Commands
                 .WithMessage("Deadline must be in the future")
                 .When(x => x.Deadline.HasValue);
         }
+
+        public class UpdateTaskValidator : AbstractValidator<UpdateTask>
+        {
+            public UpdateTaskValidator()
+            {
+                RuleFor(x => x.Id)
+                    .NotEmpty();
+                RuleFor(x => x.Title)
+                    .NotEmpty()
+                    .MaximumLength(100);
+                RuleFor(x => x.Deadline)
+                    .Must(d => d == null || d > DateTime.UtcNow)
+                    .WithMessage("Deadline must be in the future");
+            }
+
+        }
     }
 }
