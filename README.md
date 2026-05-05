@@ -32,7 +32,7 @@ All main ToDo List features work as described<br>
 Codebase follows the listed technology stack<br>
 Optional improvements are documented if not implemented in the first iteration<br>
 
-#🚀 How to Run Locally
+##🚀 How to Run Locally
 
 ## 🌿 Branch
 
