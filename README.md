@@ -84,7 +84,7 @@ The backend is structured into the following layers:
 ### Main page
 
 <p align="center">
-  <img src="assets/todo-app.png" width="800"/>
+  <img src="assests/todo.png" width="800"/>
 </p>
 
 ---
