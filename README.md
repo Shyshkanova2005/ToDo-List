@@ -83,7 +83,9 @@ The backend is structured into the following layers:
 
 ### Main page
 
-![ToDo App](assests/todo.png)
+<p align="center">
+  <img src="assets/todo-app.png" width="800"/>
+</p>
 
 ---
 
@@ -94,6 +96,8 @@ The backend is structured into the following layers:
 git clone https://github.com/Shyshkanova2005/ToDo-List.git
 cd ToDo-List
 ```
+
+## 🖥️ Backend (.NET 10)
 
 ## 2. Restore dependencies
 ```
@@ -121,4 +125,26 @@ dotnet run --project ToDoList.Api
 ## 6. Run tests
 ```
 dotnet test
+```
+## 🌐 Frontend (Angular)
+
+## 1. Install dependencies
+```
+cd client
+npm install
+```
+
+## 2. Run frontend
+```
+ng serve
+```
+
+## Application runs on:
+```
+http://localhost:4200
+```
+
+## 3. Run tests
+```
+npm test
 ```
