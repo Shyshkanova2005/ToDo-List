@@ -83,7 +83,7 @@ The backend is structured into the following layers:
 
 ### Main page
 
-![ToDo App](assets/todo.png)
+![ToDo App](assests/todo.png)
 
 ---
 
