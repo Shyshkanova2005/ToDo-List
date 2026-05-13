@@ -1,44 +1,86 @@
 # ToDo-List
-Feature: ToDo List Functionality  
 
-Implement a ToDo List module within the application with the following capabilities:  
+## 📌 Overview
+A full-stack ToDo List application built with Angular and .NET, following clean architecture principles (CQRS + MediatR). The system allows users to manage tasks efficiently with statuses and deadlines.
 
-Functional Requirements:
+---
 
-Create tasks<br>
-Edit tasks<br>
-Delete tasks as needed<br>
-Change task status (Todo, In Progress, Done)<br>
-Add a calendar component to set task deadlines<br>
-Technology Stack:<br>
+## ✨ Features
 
-HTML, CSS, TypeScript<br>
-Angular, Redux (Redux Toolkit)<br>
-AntDesign/MUI (optional)<br>
-Jest<br>
-.NET 9.0 (Backend)<br>
-EF Core<br>
-MediatR + CQRS<br>
-N-layer architecture<br>
-XUnit tests + coverage<br>
-Mapper (optional)<br>
-Serilog (optional)<br>
-Docker local setup (optional)<br>
-MSSQL database<br>
-(Optional) Integrate OpenTelemetry (frontend & backend), export traces and metrics to an OTLP exporter (e.g., SigNoz) to enable complete end-to-end tracing and logging<br>
-Acceptance Criteria:<br>
+- ➕ Create tasks  
+- ✏️ Edit tasks  
+- 🗑️ Delete tasks  
+- 🔄 Change task status (Todo, In Progress, Done)  
+- 📅 Set deadlines using a calendar component
+- 🔍 Search tasks by title or description
+   
+---
 
-All main ToDo List features work as described<br>
-Codebase follows the listed technology stack<br>
-Optional improvements are documented if not implemented in the first iteration<br>
+## 🛠️ Tech Stack
+
+### Frontend
+- HTML, CSS, TypeScript  
+- Angular  
+- NgRx (state management)  
+- Jest (unit testing)  
+- UI library: Angular Material 
+
+### Backend
+- .NET 10.0 Web API  
+- Entity Framework Core  
+- MediatR + CQRS pattern  
+- N-layer architecture  
+- xUnit (unit testing + coverage)  
+
+### Database
+- Microsoft SQL Server (MSSQL)
+
+---
+
+## 🧱 Architecture
+
+The project follows a **Client–Server architecture** with a clean, layered backend design based on **Clean Architecture principles**.
+
+### Backend (.NET 10)
+
+The backend is structured into the following layers:
+
+- **Presentation Layer**
+  - ASP.NET Core Web API
+  - Controllers (HTTP endpoints)
+  - Request/Response handling
+
+- **Application Layer**
+  - CQRS pattern (Commands & Queries)
+  - MediatR for request handling
+  - Business use cases and application logic
+
+- **Domain Layer**
+  - Core entities
+  - Business rules
+  - Domain models
+
+- **Infrastructure Layer**
+  - Entity Framework Core (EF Core)
+  - Database access and configuration
+  - External services integration
+
+### Frontend (Angular)
+
+- Angular standalone components
+- NgRx for state management
+- Services for API communication
+- Reactive forms and component-based architecture
+
+### Key Principles
+
+- Separation of concerns
+- Dependency inversion
+- Single responsibility principle
+- Scalable and testable structure
+
 
 ## 🚀 How to Run Locally
-
-## 🌿 Branch
-
-Current working branch: `feature/todo-backend`
-
-👉 Please switch branch in GitHub to view latest changes.
 
 ## 1. Clone repository
 ```
