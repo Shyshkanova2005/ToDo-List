@@ -54,5 +54,20 @@ namespace ToDoList.Api.Controllers
                 return NotFound();
             return Ok(task);
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            await _mediator.Send(new DeleteTask { Id = id });
+            return NoContent();
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteAll()
+        {
+            await _mediator.Send(new DeleteAllTasks());
+            return NoContent();
+
+        }
     }
 }
