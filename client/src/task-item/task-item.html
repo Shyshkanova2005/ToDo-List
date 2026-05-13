@@ -1,0 +1,26 @@
+<div class="task-card-v1">
+  <div class="task-header">
+    <div class="title-group">
+      <h3>{{ task.title }}</h3>
+      <p class="description">{{ task.description }}</p>
+    </div>
+
+    <span class="status-badge" [ngClass]="getStatusClass(task.status)">
+      {{ getStatusText(task.status) }}
+    </span>
+  </div>
+
+  <div class="task-footer">
+    <div class="deadline-info" *ngIf="task.deadline">
+      <div class="icon">📅</div> <span>Due: {{ task.deadline | date:'mediumDate' }}</span>
+    </div>
+    <div class="actions">
+      <button class="btn-action btn-edit" (click)="onEdit()">
+        <span class="text">Edit</span>
+      </button>
+      <button class="btn-action btn-delete" (click)="onDelete()">
+        <span class="text">Delete</span>
+      </button>
+    </div>
+  </div>
+</div>

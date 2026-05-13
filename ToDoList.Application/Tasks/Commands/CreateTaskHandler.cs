@@ -22,8 +22,9 @@ namespace ToDoList.Application.Tasks.Commands
                 Title = request.Title,
                 Description = request.Description,
 
-                Status = ToDoTaskStatus.Todo,
-                Deadline = request.Deadline
+                Status = request.Status,
+                Deadline = request.Deadline,
+                CreatedAt = DateTime.UtcNow
             };
 
             _context.Tasks.Add(task);

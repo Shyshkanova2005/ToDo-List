@@ -15,25 +15,9 @@ namespace ToDoList.Application.Tasks.Commands
                 .MaximumLength(500).WithMessage("Description must be under 500 characters")
                 .When(x => x.Description != null);
             RuleFor(x => x.Deadline)
-                 .GreaterThan(DateTime.UtcNow)
+                .Must(d => d == null || d.Value.Date >= DateTime.UtcNow.Date)
                 .WithMessage("Deadline must be in the future")
                 .When(x => x.Deadline.HasValue);
-        }
-
-        public class UpdateTaskValidator : AbstractValidator<UpdateTask>
-        {
-            public UpdateTaskValidator()
-            {
-                RuleFor(x => x.Id)
-                    .NotEmpty();
-                RuleFor(x => x.Title)
-                    .NotEmpty()
-                    .MaximumLength(100);
-                RuleFor(x => x.Deadline)
-                    .Must(d => d == null || d > DateTime.UtcNow)
-                    .WithMessage("Deadline must be in the future");
-            }
-
         }
     }
 }
