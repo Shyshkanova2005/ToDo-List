@@ -37,7 +37,7 @@ A full-stack ToDo List application built with Angular and .NET, following clean 
 
 ---
 
-## 🧱 Architecture
+## 🏗️ Architecture
 
 The project follows a **Client–Server architecture** with a clean, layered backend design based on **Clean Architecture principles**.
 
@@ -79,6 +79,13 @@ The backend is structured into the following layers:
 - Single responsibility principle
 - Scalable and testable structure
 
+## 📸 UI Preview
+
+### Main page
+
+![ToDo App](assets/todo.png)
+
+---
 
 ## 🚀 How to Run Locally
 
